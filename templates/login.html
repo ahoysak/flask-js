@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+    <form method="post" name="test" id="test_form"  class="login_form">
+        <label for="email">Email </label>
+        <input type="text" placeholder="Your email" id="email" name="email"><br>
+
+        <label for="password">Password </label>
+        <input type="password" placeholder="Your password" id="password" name="password"><br>
+
+       <input id="btn_two" class="btn_two" type="button"
+               name="btn_greats" value="Реєстрація">
+    </form>
+        <div class="not_account">
+            <p>У вас немає облікового запису?</p>
+            <a href="/registration">Створити новий обліковий запис</a>
+        </div>
+    <script src="static/js/login.js" type="text/javascript"></script>
+{% endblock %}

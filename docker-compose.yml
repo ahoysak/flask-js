@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: docker/docker/python/Dockerfile
+    volumes:
+      - .:/application
+    ports:
+      - '8080:8080'
+    environment:
+      PYTHONBUFFERED: 1
+    networks:
+      - app
+    depends_on:
+      - mysql
+
+
+  mysql:
+    image: mysql:8.0.29
+    volumes:
+      - ./docker/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: flask
+      MYSQL_DATABASE: flask
+      MYSQL_USER: flask
+      MYSQL_PASSWORD: flask
+    ports:
+      - "5535:3306"
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
+
+
+#sudo docker-compose exec name_db bash
+#mysql -u root -p^C

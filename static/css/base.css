@@ -1,0 +1,49 @@
+body{
+    background: Beige;
+}
+button{
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    padding: 150px 10px;
+    border-style: none;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none
+}
+.register_form{
+    text-align: center;
+    text-decoration: none;
+}
+.login_form{
+    padding: 150px 10px;
+    border-style: none;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+.not_account{
+    padding: 255px 10px;
+    border-style: none;
+    text-align: center;
+    font-size: 30px;
+}
+.form_add{
+    text-align: center;
+    font-size: 25px;
+}
+.btn_log{
+    background: DarkSeaGreen;
+    color: black;
+}
+.btn_logout{
+    background: DarkGrey;
+    color: black;
+}
+.btn_reg{
+    background: DarkGrey;
+    color: black;
+}
